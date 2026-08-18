@@ -65,7 +65,9 @@ export async function getEntryWithFallback(
   }
 
   // 2. Fall back to English (default locale).
-  if (locale !== defaultLocale) {
+  // Compare as strings so this generic fallback branch remains type-checkable
+  // even when a particular site instance configures only the default locale.
+  if (String(locale) !== String(defaultLocale)) {
     const fallback = await getEntry('wiki', `${defaultLocale}/${category}/${slug}`);
     if (fallback && isPublished(fallback)) {
       return { entry: fallback, servedLocale: defaultLocale, isFallback: true };
@@ -156,7 +158,9 @@ export async function getRelatedEntries(
  * All tags for a locale with article counts, most-used first.
  * Does NOT fall back to English (list accuracy rule — PRD §9.3).
  */
-export async function getTagsWithCounts(locale: Locale): Promise<Array<{ tag: string; count: number }>> {
+export async function getTagsWithCounts(
+  locale: Locale,
+): Promise<Array<{ tag: string; count: number }>> {
   const all = await getCollection('wiki');
   const counts = new Map<string, number>();
   for (const e of all) {

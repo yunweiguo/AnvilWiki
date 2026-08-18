@@ -7,15 +7,10 @@
  *
  * Sections (top to bottom):
  *   1. Hero          — title, description, CTAs (strong visual anchor)
- *   2. QuickStart    — 4 large icon cards (Codes / Bosses / Guides / Tier)
+ *   2. QuickStart    — 4 large topic cards
  *   3. Recent Updates + Trending links (two columns)
  *   4. Explore       — 4 content modules with displayTypes
  *   5. ClosingCta      — bottom call-to-action
- *
- * v0.2 refactor: trimmed from 8 sections to 5. Removed GameInfo (info
- * duplicated Hero stats), FAQ (moved to /faq), standalone TrendingNow
- * (merged into Recent Updates). Explore modules trimmed 8→4. Page length
- * compressed from ~7 screens to ~4.
  */
 import { Icon } from 'astro-icon/components';
 import LocaleLayout from '~/components/layout/LocaleLayout.astro';
@@ -23,7 +18,6 @@ import VideoSection from '~/components/home/VideoSection.astro';
 import QuickStart from '~/components/home/QuickStart.astro';
 import ExploreModules from '~/components/home/ExploreModules.astro';
 import { site } from '~/config/site';
-import { NAVIGATION_CONFIG } from '~/config/navigation';
 import { type Locale } from '~/i18n/routing';
 import { getUi } from '~/i18n/ui';
 import { getRecentEntries, parseEntryId } from '~/lib/content';
@@ -108,7 +102,7 @@ function trendingLabel(link: QuickLink): string {
         }
         {
           hero.ctaSecondary && (
-            <a href={listPath(NAVIGATION_CONFIG[1]?.key ?? 'guides', locale)} class="btn-outline">
+            <a href={listPath('platforms', locale)} class="btn-outline">
               {hero.ctaSecondary}
             </a>
           )
@@ -135,7 +129,7 @@ function trendingLabel(link: QuickLink): string {
       <div class="lg:col-span-2">
         <div class="flex items-baseline justify-between">
           <h2 class="text-2xl font-bold">{updates.title}</h2>
-          <a href={listPath(NAVIGATION_CONFIG[1]?.key ?? 'guides', locale)} class="text-sm text-foreground hover:text-nav hover:underline"
+          <a href={listPath('updates', locale)} class="text-sm text-foreground hover:text-nav hover:underline"
             >{shared.browseAll}</a
           >
         </div>

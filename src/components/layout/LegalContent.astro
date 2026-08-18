@@ -24,26 +24,23 @@ const year = new Date().getFullYear();
       </p>
       <h2>What We Cover</h2>
       <ul>
-        <li>Boss strategies and attack patterns</li>
-        <li>Item locations, stats, and crafting recipes</li>
-        <li>Active redeemable codes (updated daily)</li>
-        <li>Tier lists and build recommendations</li>
-        <li>Progression guides for new and returning players</li>
+        <li>Crossplay and platform availability</li>
+        <li>Beginner and solo survival guides</li>
+        <li>Responder characters, progression, and loadouts</li>
+        <li>Armageddon 1.0 and other major game updates</li>
+        <li>PC requirements and console purchase information</li>
       </ul>
-      <h2>Community-Driven</h2>
+      <h2>How We Work</h2>
       <p>
-        This wiki is maintained by volunteers. If you spot an error or have content to contribute,
-        join our Discord and let us know. All content is freely accessible — no account required.
+        Articles are written from official announcements and current platform listings, with sources
+        linked from each guide wherever possible. All content is freely accessible — no account
+        required.
       </p>
-      <h2>Contact</h2>
+      <h2>Official Game Channels</h2>
       <p>
-        Reach us via our{' '}
-        <a href={site.social.discord} target="_blank" rel="noopener noreferrer">
-          Discord server
-        </a>{' '}
-        or{' '}
+        For announcements and support relating to the game itself, visit{' '}
         <a href={site.social.official} target="_blank" rel="noopener noreferrer">
-          the game's official channels
+          the official {game} website
         </a>
         .
       </p>
@@ -70,8 +67,8 @@ const year = new Date().getFullYear();
       </p>
       <ul>
         <li>
-          <strong>Advertising partners</strong> (e.g. Google AdSense) — may use cookies to
-          serve relevant ads. You can opt out of personalized advertising via your browser settings.
+          <strong>Advertising partners</strong> (e.g. Google AdSense) — may use cookies to serve
+          relevant ads. You can opt out of personalized advertising via your browser settings.
         </li>
         <li>
           <strong>Analytics</strong> (e.g. Google Analytics, Cloudflare Web Analytics) — GA may
@@ -86,13 +83,13 @@ const year = new Date().getFullYear();
         <li>
           <strong>Comments</strong> (giscus, opt-in) — when the comment section is enabled,
           giscus.app loads an embedded GitHub view; viewing it exposes your IP address and browser
-          info to that service, and signing in to comment is handled by GitHub under its own
-          privacy policy.
+          info to that service, and signing in to comment is handled by GitHub under its own privacy
+          policy.
         </li>
         <li>
-          <strong>Embedded videos</strong> (YouTube) — pages with videos load thumbnail images
-          from i.ytimg.com and, after you press play, the YouTube player from youtube-nocookie.com.
-          Until you interact, no YouTube cookies are set.
+          <strong>Embedded videos</strong> (YouTube) — pages with videos load thumbnail images from
+          i.ytimg.com and, after you press play, the YouTube player from youtube-nocookie.com. Until
+          you interact, no YouTube cookies are set.
         </li>
       </ul>
       <h2>Cookies</h2>
@@ -170,12 +167,8 @@ const year = new Date().getFullYear();
       </p>
       <h2>DMCA / Takedown</h2>
       <p>
-        If you believe any content on this site infringes your copyright, please contact us via our{' '}
-        <a href={site.social.discord} target="_blank" rel="noopener noreferrer">
-          Discord server
-        </a>{' '}
-        with a detailed description of the allegedly infringing material. We will review and respond
-        to valid requests promptly.
+        A dedicated takedown contact is not currently published. This page will be updated when a
+        direct contact method is available.
       </p>
       <h2>Fan-Made Notice</h2>
       <p>{site.legalNotice}</p>
@@ -189,45 +182,20 @@ const year = new Date().getFullYear();
       {/* h2, not h1 — LegalPage already renders the page H1 (single-H1 rule). */}
       <h2>Contact {site.name}</h2>
       <p>
-        {site.name} is a community-run wiki. The fastest way to reach us or contribute is through
-        our community channels below.
+        {site.name} does not currently publish a direct editorial inbox or community server. We will
+        add a contact method here when one is available.
       </p>
-      <h2>Community</h2>
-      <ul>
-        {site.social.discord && (
-          <li>
-            <strong>Discord:</strong>{' '}
-            <a href={site.social.discord} target="_blank" rel="noopener noreferrer">
-              Join our server
-            </a>
-          </li>
-        )}
-        {site.social.reddit && (
-          <li>
-            <strong>Reddit:</strong>{' '}
-            <a href={site.social.reddit} target="_blank" rel="noopener noreferrer">
-              r/{site.game.name}
-            </a>
-          </li>
-        )}
-        {site.social.youtube && (
-          <li>
-            <strong>YouTube:</strong>{' '}
-            <a href={site.social.youtube} target="_blank" rel="noopener noreferrer">
-              {site.name} channel
-            </a>
-          </li>
-        )}
-      </ul>
-      <h2>Contributing</h2>
+      <h2>Game Support</h2>
       <p>
-        Found a typo or outdated info? Want to add a guide? This wiki is open source — submit changes
-        via pull requests or reach out on Discord.
+        For account, purchase, or technical support relating to {game}, use the channels listed on{' '}
+        <a href={site.social.official} target="_blank" rel="noopener noreferrer">
+          the official game website
+        </a>
+        . {site.name} is an independent fan site and cannot provide official game support.
       </p>
       <h2>Reporting Issues</h2>
       <p>
-        For copyright or takedown requests, see our{' '}
-        <a href="/copyright">Copyright page</a>.
+        For copyright or takedown requests, see our <a href="/copyright">Copyright page</a>.
       </p>
     </>
   )
