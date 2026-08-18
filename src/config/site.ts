@@ -60,7 +60,7 @@ export const site: SiteConfig = {
   shortName: 'NMRiH2',
   description:
     'No More Room in Hell 2 guides for crossplay, Xbox, PS5, solo mode, beginner tips, Responders, and the latest 1.0 updates.',
-  domain: 'nmrih2.pages.dev',
+  domain: 'nmrih2-5cp.pages.dev',
   tagline: 'Crossplay, platforms, survival guides, and 1.0 updates',
   legalNotice:
     'NMRiH2 Wiki is a fan-made site and is not affiliated with Torn Banner Studios or Green Man Gaming Publishing.',

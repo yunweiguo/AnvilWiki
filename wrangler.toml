@@ -19,7 +19,7 @@ pages_build_output_dir = "dist"
 
 [vars]
 # Site (must include https:// protocol — Astro validates this as a URL)
-SITE_URL = "https://nmrih2.pages.dev"
+SITE_URL = "https://nmrih2-5cp.pages.dev"
 # Giscus comments (empty = disabled)
 PUBLIC_GISCUS_REPO = ""
 PUBLIC_GISCUS_REPO_ID = ""
