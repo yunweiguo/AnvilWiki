@@ -1,11 +1,11 @@
 {
-  "name": "Anvil Quest Wiki",
-  "short_name": "AQ Wiki",
-  "description": "Complete Anvil Quest wiki with boss guides, codes, and tier lists.",
+  "name": "NMRiH2 Wiki",
+  "short_name": "NMRiH2",
+  "description": "No More Room in Hell 2 crossplay, platform, gameplay, and update guides.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#f97316",
+  "theme_color": "#b91c1c",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

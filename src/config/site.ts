@@ -41,8 +41,6 @@ export interface SiteConfig {
     developer: string;
     /** Genre description. */
     genre: string;
-    /** ISO release date (optional). */
-    releaseDate?: string;
   };
   /**
    * Dimensions of the default OG/Twitter share image (public/images/hero.webp).
@@ -51,37 +49,31 @@ export interface SiteConfig {
    */
   ogImageWidth: number;
   ogImageHeight: number;
-  /** Default author name for articles without an explicit `author` in frontmatter (E-E-A-T signal). */
-  defaultAuthor?: string;
 }
 
 export const site: SiteConfig = {
-  name: 'Anvil Quest Wiki',
-  shortName: 'AQ Wiki',
+  name: 'NMRiH2 Wiki',
+  shortName: 'NMRiH2',
   description:
-    'Complete Anvil Quest wiki with boss guides, tier lists, codes, item locations, and beginner tips. Updated daily by the community.',
-  domain: 'anvilwiki.pages.dev',
-  tagline: 'Your forge for everything Anvil Quest',
+    'No More Room in Hell 2 guides for crossplay, Xbox, PS5, solo mode, beginner tips, Responders, and the latest 1.0 updates.',
+  domain: 'nmrih2-5cp.pages.dev',
+  tagline: 'Crossplay, platforms, survival guides, and 1.0 updates',
   legalNotice:
-    'Anvil Quest Wiki is a fan-made community site. Not affiliated with or endorsed by the game developer.',
+    'NMRiH2 Wiki is a fan-made site and is not affiliated with Torn Banner Studios or Green Man Gaming Publishing.',
   social: {
-    official: 'https://example.com/anvil-quest',
-    discord: 'https://discord.gg/example',
-    youtube: 'https://youtube.com/@example',
-    twitter: 'https://twitter.com/example',
-    reddit: 'https://reddit.com/r/anvilquest',
+    official: 'https://www.nmrih2.com/',
   },
-  // 👉 APPLY TEMPLATE: point these at the game's real canonical pages.
   sameAs: [
-    'https://example.com/anvil-quest',
-    'https://en.wikipedia.org/wiki/Anvil_Quest',
+    'https://www.nmrih2.com/',
+    'https://store.steampowered.com/app/292000/No_More_Room_in_Hell_2/',
+    'https://www.xbox.com/en-US/games/store/no-more-room-in-hell-2/9pf1q2f7jm9g',
+    'https://store.playstation.com/en-us/concept/10019078',
   ],
   game: {
-    name: 'Anvil Quest',
-    platform: 'Roblox',
-    developer: 'Forge Studios',
-    genre: 'Fantasy RPG',
-    releaseDate: '2026-01-15',
+    name: 'No More Room in Hell 2',
+    platform: 'PC, PlayStation 5, Xbox Series X|S',
+    developer: 'Torn Banner Studios',
+    genre: 'Co-op survival horror shooter',
   },
   // hero.webp is 1200×630 (the recommended OG share aspect ratio).
   ogImageWidth: 1200,

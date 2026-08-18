@@ -1,18 +1,18 @@
 {
   "$schema": "../../docs/home.schema.json",
   "site": {
-    "name": "Anvil Quest Wiki",
-    "shortName": "AQ Wiki",
-    "description": "Complete Anvil Quest wiki with boss guides, tier lists, codes, item locations, and beginner tips. Updated daily by the community.",
-    "tagline": "Your forge for everything Anvil Quest",
-    "legalNotice": "Anvil Quest Wiki is a fan-made community site. Not affiliated with or endorsed by the game developer."
+    "name": "NMRiH2 Wiki",
+    "shortName": "NMRiH2",
+    "description": "No More Room in Hell 2 guides for crossplay, platforms, solo play, beginners, Responders, and the latest 1.0 updates.",
+    "tagline": "Crossplay, platforms, survival guides, and 1.0 updates",
+    "legalNotice": "NMRiH2 Wiki is a fan-made site and is not affiliated with Torn Banner Studios or Green Man Gaming Publishing."
   },
   "nav": {
     "home": "Home",
-    "bosses": "Bosses",
     "guides": "Guides",
-    "items": "Items",
-    "codes": "Codes",
+    "platforms": "Platforms",
+    "gameplay": "Gameplay",
+    "updates": "Updates",
     "toggleTheme": "Toggle theme",
     "menu": "Menu",
     "close": "Close",
@@ -20,7 +20,7 @@
     "language": "Language"
   },
   "search": {
-    "placeholder": "Search the wiki...",
+    "placeholder": "Search No More Room in Hell 2 guides...",
     "noResults": "No matches found"
   },
   "shared": {
@@ -39,40 +39,6 @@
     "accept": "Accept",
     "decline": "Decline",
     "consentTitle": "Cookies",
-    "bossCard": {
-      "title": "Boss Overview",
-      "hp": "HP",
-      "weakness": "Weakness",
-      "resistant": "Resistant",
-      "location": "Location",
-      "level": "Rec. Level"
-    },
-    "codesTable": {
-      "active": "Active Codes",
-      "expired": "Expired Codes",
-      "reward": "Reward",
-      "expires": "Expires",
-      "source": "Source",
-      "code": "Code"
-    },
-    "codesFaq": [
-      {
-        "question": "How do I redeem codes?",
-        "answer": "Open the game, click the settings gear in the top-right, paste your code into the Redeem Code field, and confirm. Codes are case-sensitive."
-      },
-      {
-        "question": "Why do codes stop working?",
-        "answer": "Codes expire on a schedule set by the developer (usually monthly or tied to update milestones), and some are one-per-account. This page is re-tested regularly."
-      },
-      {
-        "question": "How often are new codes released?",
-        "answer": "New codes typically arrive with each major game update. Bookmark this page and check back after every patch."
-      },
-      {
-        "question": "Do codes expire?",
-        "answer": "Yes — most codes have an expiry date, shown next to each code. Expired codes move to the expired table below."
-      }
-    ],
     "possiblyOutdated": "This guide was last checked on",
     "outdatedNote": "— the game may have changed since. Some details could be out of date.",
     "prevArticle": "Previous",
@@ -87,7 +53,7 @@
     "tagsIndexDescription": "Browse all articles by topic.",
     "articlesCount": "articles",
     "recentTitle": "Recent Updates",
-    "recentDescription": "The latest articles and updates across the wiki, newest first.",
+    "recentDescription": "The latest No More Room in Hell 2 guides and update coverage.",
     "sponsorTitle": "Support this wiki",
     "sponsorText": "If these guides helped you, consider supporting the site.",
     "sponsorButton": "Support us",
@@ -113,296 +79,132 @@
     "paginationAria": "Article pagination"
   },
   "overview": {
-    "bosses": {
-      "overviewTitle": "All Bosses",
-      "overviewDescription": "Complete strategy guides for every boss in Anvil Quest, including attack patterns, weaknesses, and recommended loadouts."
-    },
     "guides": {
-      "overviewTitle": "All Guides",
-      "overviewDescription": "In-depth tutorials covering progression, crafting, combat mechanics, and advanced strategies for Anvil Quest."
+      "overviewTitle": "No More Room in Hell 2 Guides",
+      "overviewDescription": "Crossplay, solo mode, beginner survival tips, and buying advice for No More Room in Hell 2."
     },
-    "items": {
-      "overviewTitle": "All Items",
-      "overviewDescription": "Comprehensive item database with locations, stats, rarity tiers, and crafting recipes."
+    "platforms": {
+      "overviewTitle": "No More Room in Hell 2 Platforms",
+      "overviewDescription": "Current availability, pricing, multiplayer requirements, and crossplay details for PC, PS5, and Xbox Series X|S."
     },
-    "codes": {
-      "overviewTitle": "All Codes",
-      "overviewDescription": "Active Anvil Quest codes for free coins, gems, and exclusive items. Verified daily."
+    "gameplay": {
+      "overviewTitle": "No More Room in Hell 2 Gameplay",
+      "overviewDescription": "Learn how Responders, progression, loadouts, infection, permadeath, and other core gameplay systems work."
+    },
+    "updates": {
+      "overviewTitle": "No More Room in Hell 2 Updates",
+      "overviewDescription": "Official update coverage, patch highlights, new modes, maps, progression changes, and launch information."
     }
   },
   "home": {
     "meta": {
-      "title": "Anvil Quest Wiki - Complete Boss Guides, Codes & Tier Lists",
-      "description": "The most complete Anvil Quest wiki. Boss strategies, active codes, item locations, tier lists, and beginner guides. Updated daily by the community."
+      "title": "No More Room in Hell 2 Wiki, Guides & Crossplay",
+      "description": "No More Room in Hell 2 guides for crossplay, Xbox, PS5, solo mode, beginner tips, characters and the latest 1.0 updates."
     },
     "hero": {
-      "badge": "Fan-Made Community Wiki",
-      "title": "Anvil Quest Wiki",
-      "description": "Your complete guide to Anvil Quest. Boss strategies, active codes, item locations, tier lists, and everything you need to master the forge.",
-      "ctaPrimary": "Play Anvil Quest",
-      "ctaSecondary": "Browse Guides",
+      "badge": "Updated for Armageddon 1.0",
+      "title": "No More Room in Hell 2 Wiki & Guides",
+      "description": "Find direct, source-linked answers about crossplay, supported platforms, Solo Mode, survival basics, Responders, and the current 1.0 release.",
+      "ctaPrimary": { "label": "Crossplay Guide", "href": "/guides/crossplay", "external": false },
+      "ctaSecondary": { "label": "Beginner Guide", "href": "/guides/beginner-tips", "external": false },
       "videoId": ""
-    },
-    "updates": {
-      "title": "Recent Updates"
     },
     "start": {
       "badge": "Start Here",
-      "title": "Your Anvil Quest Journey",
+      "title": "Start Here",
       "cards": [
-        {
-          "number": "1",
-          "title": "Beginner Guide",
-          "description": "New to Anvil Quest? Start here with the essential mechanics, controls, and your first hour walkthrough.",
-          "icon": "lucide:book-open",
-          "href": "/guides/beginner-guide"
-        },
-        {
-          "number": "2",
-          "title": "Active Codes",
-          "description": "Redeem the latest codes for free coins, gems, and exclusive cosmetic items.",
-          "icon": "lucide:gift",
-          "href": "/codes"
-        },
-        {
-          "number": "3",
-          "title": "Boss Strategies",
-          "description": "Complete guides for every boss with attack patterns, weaknesses, and recommended loadouts.",
-          "icon": "lucide:swords",
-          "href": "/bosses"
-        },
-        {
-          "number": "4",
-          "title": "Weapon Tier List",
-          "description": "Ranking every weapon from S to C based on DPS, utility, and synergy.",
-          "icon": "lucide:list-ordered",
-          "href": "/guides/weapon-tier-list"
-        }
+        { "number": "1", "title": "Crossplay Guide", "description": "Check every supported PC, PS5, and Xbox pairing before inviting your squad.", "icon": "lucide:users", "href": "/guides/crossplay" },
+        { "number": "2", "title": "Platform Guides", "description": "Compare current availability, purchase options, and online requirements.", "icon": "lucide:gamepad-2", "href": "/platforms/xbox" },
+        { "number": "3", "title": "Beginner Tips", "description": "Learn practical habits for infection, combat, resources, teamwork, and extraction.", "icon": "lucide:shield-check", "href": "/guides/beginner-tips" },
+        { "number": "4", "title": "Solo Mode", "description": "Understand independent play and how to prepare before risking a developed Responder.", "icon": "lucide:user", "href": "/guides/solo-mode" }
       ]
+    },
+    "featuredSections": [
+      {
+        "title": "No More Room in Hell 2 Crossplay",
+        "description": "Yes. No More Room in Hell 2 supports crossplay between Windows PC, PlayStation 5, and Xbox Series X|S. Players on any current platform can join the same online co-op squad, including mixed groups spanning all three ecosystems. The supported console versions are current-generation only, so PS4 and Xbox One are not part of the compatibility matrix. Cross-platform multiplayer does not automatically mean universal cross-progression: official launch information confirms shared play, while account progress outside the Xbox ecosystem should not be assumed to transfer. Use the full guide for setup details and version-aware troubleshooting.",
+        "matrix": {
+          "caption": "Cross-platform multiplayer compatibility",
+          "headers": ["Platform pairing", "Compatible?", "What it means"],
+          "rows": [
+            ["PC ↔ PS5", "Yes", "Steam and PlayStation 5 players can join the same squad."],
+            ["PC ↔ Xbox Series X|S", "Yes", "Windows PC and current Xbox consoles support shared online play."],
+            ["PS5 ↔ Xbox Series X|S", "Yes", "Current PlayStation and Xbox players can play together."]
+          ]
+        },
+        "cta": { "label": "Read the complete crossplay guide", "href": "/guides/crossplay", "external": false }
+      },
+      {
+        "title": "Where Can You Play No More Room in Hell 2?",
+        "description": "The 1.0 release is available on Windows PC and current-generation consoles. Each guide below separates confirmed store information from details that can change over time.",
+        "cards": [
+          { "title": "Xbox Series X|S", "description": "Yes. The game is sold for Xbox Series X|S and supports cross-platform co-op. Xbox One is not listed as a supported version, and online console multiplayer requires an eligible subscription plan with that capability.", "href": "/platforms/xbox", "linkLabel": "View the Xbox guide" },
+          { "title": "PlayStation 5", "description": "Yes. The PlayStation release is available on PS5 with Solo Mode and online play for up to eight players. PS4 is not listed, while online multiplayer may require a separate PlayStation subscription.", "href": "/platforms/ps5", "linkLabel": "View the PS5 guide" },
+          { "title": "Steam / PC", "description": "Yes. The Windows PC version is sold on Steam and lists cross-platform multiplayer, online co-op, controller support, achievements, and Steam Cloud. Check the current store page before buying for live pricing and requirements.", "href": "/platforms/steam-pc", "linkLabel": "View the Steam and PC guide" },
+          { "title": "Game Pass", "description": "No, as last checked on August 18, 2026, the game was sold separately and was not listed in the Xbox or PC Game Pass catalog. This is a time-sensitive status, so verify the current catalog before deciding how to buy.", "href": "/platforms/game-pass", "linkLabel": "Check the current Game Pass status" }
+        ]
+      },
+      {
+        "title": "No More Room in Hell 2 Beginner & Gameplay Guides",
+        "description": "Learn the systems that matter before committing valuable gear or a developed character to a dangerous run.",
+        "cards": [
+          { "title": "Beginner Survival", "description": "Start with the tutorial, control noise, stay close enough to help the squad, share scarce supplies, and treat infection early. A safe extraction is usually more valuable than one unnecessary fight.", "href": "/guides/beginner-tips", "linkLabel": "Read the beginner guide" },
+          { "title": "Solo Mode", "description": "Solo Mode supports independent practice on every map and removes the pressure of coordinating with a full squad. It is useful for learning routes and objectives, though the core co-op experience plays differently.", "href": "/guides/solo-mode", "linkLabel": "Learn how Solo Mode works" },
+          { "title": "Responders & Permadeath", "description": "Responders are persistent characters whose individual progress can be lost on death. Successful extraction protects that investment, while loadouts, perks, infection, and the limited Rescue Beacon shape every risk decision.", "href": "/gameplay/characters", "linkLabel": "Understand characters and Responders" },
+          { "title": "Progression", "description": "Armageddon 1.0 revised the account economy, skills, weekly Assignments, Merits, Nightmare Tokens, and loadout rules. The launch update guide explains the reset and the progression changes that apply after Early Access.", "href": "/updates/armageddon-1-0", "linkLabel": "Review the 1.0 progression changes" }
+        ]
+      }
+    ],
+    "latest": {
+      "title": "Latest No More Room in Hell 2 Updates",
+      "description": "Follow source-linked coverage of major releases and material gameplay changes. General guides are excluded from this section.",
+      "category": "updates",
+      "limit": 3,
+      "href": "/updates",
+      "linkLabel": "Browse all updates"
     },
     "popular": {
-      "badge": "Trending Now",
-      "title": "Most Read This Week",
-      "quickLinks": [
-        {
-          "label": "Emberfang Boss Guide",
-          "href": "/bosses/emberfang"
-        },
-        {
-          "label": "Best Weapons Tier List",
-          "href": "/guides/weapon-tier-list"
-        },
-        {
-          "label": "Beginner Guide",
-          "href": "/guides/beginner-guide"
-        },
-        {
-          "label": "All Active Codes",
-          "href": "/codes"
-        }
-      ]
-    },
-    "explore": {
-      "title": "Explore the Wiki",
-      "description": "Everything you need, organized by category. Pick a topic and dive in.",
-      "modules": [
-        {
-          "order": 1,
-          "name": "Anvil Quest Codes",
-          "description": "Active codes for free coins, gems, and exclusive items. Updated daily.",
-          "href": "/codes",
-          "displayType": "badge-list",
-          "highlights": [
-            {
-              "label": "FORGE-2026",
-              "detail": "+500 Gold · expires Aug 31",
-              "badge": "Active"
-            },
-            {
-              "label": "EMBERBORN",
-              "detail": "2× XP (30 min) · expires Aug 31",
-              "badge": "Active"
-            },
-            {
-              "label": "ASHENKEEP",
-              "detail": "Ashen Keep cosmetic set",
-              "badge": "Active"
-            }
-          ]
-        },
-        {
-          "order": 2,
-          "name": "Boss Strategies",
-          "description": "Complete guides for every boss with attack patterns and weaknesses.",
-          "href": "/bosses",
-          "displayType": "labeled-cards",
-          "highlights": [
-            {
-              "label": "Emberfang",
-              "detail": "Frost warden, early-game gatekeeper"
-            },
-            {
-              "label": "Stormcaller",
-              "detail": "Fire titan, mid-game DPS check"
-            },
-            {
-              "label": "Voidking",
-              "detail": "Final boss, requires full prep"
-            }
-          ]
-        },
-        {
-          "order": 3,
-          "name": "Progression Guides",
-          "description": "Leveling routes, class builds, and endgame preparation.",
-          "href": "/guides",
-          "displayType": "steps",
-          "highlights": [
-            {
-              "label": "1",
-              "detail": "Pick a starting class"
-            },
-            {
-              "label": "2",
-              "detail": "Clear the tutorial forge"
-            },
-            {
-              "label": "3",
-              "detail": "Unlock the Shattered Isles"
-            },
-            {
-              "label": "4",
-              "detail": "Defeat your first world boss"
-            }
-          ]
-        },
-        {
-          "order": 4,
-          "name": "Weapon Tier List",
-          "description": "Ranking every weapon from S to C based on DPS, utility, and synergy.",
-          "href": "/guides/weapon-tier-list",
-          "displayType": "ranked-grid",
-          "highlights": [
-            {
-              "label": "S",
-              "detail": "Voidforge Blade, Stormcaller"
-            },
-            {
-              "label": "A",
-              "detail": "Emberclaw, Frostpike"
-            },
-            {
-              "label": "B",
-              "detail": "Ironwood Bow, Mace of Dawn"
-            },
-            {
-              "label": "C",
-              "detail": "Starter weapons"
-            }
-          ]
-        },
-        {
-          "order": 5,
-          "name": "Update History",
-          "description": "Major patches and events, newest first.",
-          "href": "/recent",
-          "displayType": "timeline",
-          "highlights": [
-            {
-              "label": "v2.5",
-              "detail": "New raid: Shadowforge released",
-              "badge": "Latest"
-            },
-            {
-              "label": "v2.4",
-              "detail": "Rebalanced all S-tier weapons"
-            },
-            {
-              "label": "v2.3",
-              "detail": "Added 3 new bosses"
-            },
-            {
-              "label": "v2.2",
-              "detail": "Launched season pass system"
-            }
-          ]
-        },
-        {
-          "order": 6,
-          "name": "Video Guides",
-          "description": "Watch the best Anvil Quest walkthroughs and boss fights.",
-          "href": "/guides",
-          "displayType": "video-grid",
-          "highlights": [
-            {
-              "title": "Beginner Walkthrough",
-              "youtubeId": "dQw4w9WgXcQ",
-              "duration": "12:34"
-            },
-            {
-              "title": "All Bosses Ranked",
-              "youtubeId": "aaaaaaaaaaa",
-              "duration": "18:42"
-            },
-            {
-              "title": "Speedrun Guide",
-              "youtubeId": "bbbbbbbbbbb",
-              "duration": "25:10"
-            },
-            {
-              "title": "Hidden Secrets",
-              "youtubeId": "ccccccccccc",
-              "duration": "9:15"
-            }
-          ]
-        }
+      "badge": "Validated search intents",
+      "title": "Popular No More Room in Hell 2 Guides",
+      "description": "These starting points reflect the core questions selected for the MVP, not a claim about live readership or an analytics ranking.",
+      "cards": [
+        { "title": "Crossplay", "description": "Confirm PC, PS5, and Xbox compatibility, setup expectations, and current troubleshooting context.", "href": "/guides/crossplay", "linkLabel": "Open the crossplay guide" },
+        { "title": "Xbox", "description": "Check supported Xbox hardware, online requirements, purchase details, and cross-platform play.", "href": "/platforms/xbox", "linkLabel": "Open the Xbox guide" },
+        { "title": "Game Pass", "description": "See the dated catalog check and separate it from Xbox online multiplayer requirements.", "href": "/platforms/game-pass", "linkLabel": "Open the Game Pass guide" },
+        { "title": "Solo Mode", "description": "Learn what Solo Mode offers and how independent runs differ from eight-player co-op.", "href": "/guides/solo-mode", "linkLabel": "Open the Solo Mode guide" }
       ]
     },
     "faq": {
-      "title": "Frequently Asked Questions",
-      "description": "Quick answers to the most common questions about Anvil Quest.",
+      "title": "No More Room in Hell 2 FAQ",
+      "description": "Short answers to the six questions new and returning players ask most often.",
       "items": [
-        {
-          "question": "What is Anvil Quest?",
-          "answer": "Anvil Quest is a fantasy RPG on Roblox where you play as a blacksmith apprentice forging weapons and battling bosses across the Shattered Isles. It launched in January 2026 and has over 12 million visits."
-        },
-        {
-          "question": "Which class should beginners pick in Anvil Quest?",
-          "answer": "Warrior is the most beginner-friendly class thanks to high HP and simple mechanics. Once you understand the game, Rogue offers the highest damage output for experienced players."
-        },
-        {
-          "question": "How do I redeem codes in Anvil Quest?",
-          "answer": "Open the game, click the settings gear in the top-right, paste your code into the 'Redeem Code' field, and hit confirm. Codes are case-sensitive."
-        },
-        {
-          "question": "Is Anvil Quest free to play?",
-          "answer": "Yes, Anvil Quest is completely free on Roblox. There are optional cosmetic microtransactions, but they do not affect gameplay balance."
-        },
-        {
-          "question": "How often does Anvil Quest update?",
-          "answer": "Forge Studios releases major content updates roughly every two weeks, with smaller hotfixes in between. New bosses and codes are typically added with each major patch."
-        }
+        { "question": "Is No More Room in Hell 2 crossplay?", "answer": "Yes. The current 1.0 release supports cross-platform multiplayer between Windows PC, PlayStation 5, and Xbox Series X|S. Mixed-platform groups can join the same online co-op squad. Crossplay does not by itself confirm that progress transfers between every storefront or account ecosystem.", "link": { "label": "See the crossplay matrix", "href": "/guides/crossplay" } },
+        { "question": "Is No More Room in Hell 2 on Xbox?", "answer": "Yes. No More Room in Hell 2 is available on Xbox Series X|S and supports cross-platform co-op. It is not listed for Xbox One. The Xbox store also states that online console multiplayer requires a separately sold, eligible subscription plan that includes that capability.", "link": { "label": "Read the Xbox guide", "href": "/platforms/xbox" } },
+        { "question": "Is No More Room in Hell 2 on PS5?", "answer": "Yes. No More Room in Hell 2 is available on PlayStation 5, with one-player Solo Mode and online co-op for up to eight players. It is not listed for PS4. The PlayStation Store is the best place to verify current pricing and online subscription requirements.", "link": { "label": "Read the PS5 guide", "href": "/platforms/ps5" } },
+        { "question": "Is No More Room in Hell 2 on Game Pass?", "answer": "No, as checked on August 18, 2026. The official Xbox listing showed the game as a separate purchase and did not mark it as included with Xbox Game Pass or PC Game Pass. Catalog availability can change, so treat this as a dated status check.", "link": { "label": "Verify the Game Pass status", "href": "/platforms/game-pass" } },
+        { "question": "Can you play No More Room in Hell 2 solo?", "answer": "Yes. Armageddon 1.0 added Solo Mode for independent practice and learning on every map. It is a useful way to study objectives and survival systems without joining an online squad, although it does not reproduce the communication and rescue decisions of co-op.", "link": { "label": "Read the Solo Mode guide", "href": "/guides/solo-mode" } },
+        { "question": "Is No More Room in Hell 2 free?", "answer": "No. It is a paid game rather than a free-to-play release. The listed base price and temporary discounts can vary by storefront, region, and date, so check Steam, the PlayStation Store, or the Xbox Store for the current amount before purchasing.", "link": { "label": "Compare the current buying context", "href": "/guides/is-it-worth-it" } }
       ]
     },
     "closingCta": {
-      "title": "Ready to Master the Forge?",
-      "description": "Bookmark this wiki and check back daily for new codes, boss guides, and tier list updates.",
-      "primary": "Play Anvil Quest",
-      "secondary": "Join Our Discord"
+      "title": "Choose Your Next Guide",
+      "description": "Confirm crossplay before assembling a mixed-platform squad, or learn the survival basics before your first deployment.",
+      "primary": { "label": "Read the Crossplay Guide", "href": "/guides/crossplay", "external": false },
+      "secondary": { "label": "Read the Beginner Guide", "href": "/guides/beginner-tips", "external": false }
     }
   },
   "footer": {
-    "playGame": "Play Anvil Quest",
+    "playGame": "Official Game Site",
     "officialDiscord": "Official Discord",
     "officialYoutube": "Official YouTube",
-    "officialTwitter": "Official Twitter",
+    "officialTwitter": "Official X",
     "officialReddit": "Official Reddit",
     "about": "About",
     "faq": "FAQ",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
     "copyright": "Copyright",
-    "copyrightText": "© 2026 Anvil Quest Wiki. Fan-made, not affiliated with Forge Studios.",
+    "copyrightText": "© 2026 NMRiH2 Wiki. Fan-made and not affiliated with Torn Banner Studios.",
     "community": "Community",
     "legal": "Legal"
   }

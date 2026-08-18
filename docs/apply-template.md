@@ -51,7 +51,6 @@ export const site = {
     platform: 'Steam',              // → Roblox / Steam / PS5 等
     developer: '...',               // → 开发商
     genre: 'Action RPG',            // → 游戏类型
-    releaseDate: '2026-01-01',      // → 发售日（可选）
   },
 };
 ```

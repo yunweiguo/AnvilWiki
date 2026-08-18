@@ -26,7 +26,7 @@ const shared = ui.shared as unknown as Record<string, any>;
 const title = shared.recentTitle as string;
 const description = shared.recentDescription as string;
 
-const entries = await getRecentEntries(locale, 200);
+const entries = await getRecentEntries(locale, { limit: 200 });
 
 const jsonLd = [
   urlListJsonLd({

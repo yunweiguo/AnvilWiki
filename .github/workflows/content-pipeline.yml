@@ -1,4 +1,4 @@
-# Content pipeline — scheduled freshness audit (v1.8).
+# Content pipeline — scheduled page-level freshness audit.
 #
 # The static-site freshness problem: content only changes when someone
 # commits. This workflow decouples "noticing what's stale" from the author
@@ -22,9 +22,8 @@ permissions:
 
 jobs:
   audit:
-    # Upstream-only: forks shouldn't get weekly issue spam about the demo
-    # content. Delete this `if` (or change the repo name) to enable on a fork.
-    if: github.repository == 'PNGTRID/AnvilWiki'
+    # Only the production repository should create recurring tracking issues.
+    if: github.repository == 'yunweiguo/AnvilWiki'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:

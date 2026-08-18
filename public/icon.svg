@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">NMRiH2 Wiki</title>
+  <rect width="512" height="512" rx="88" fill="#111111"/>
+  <path d="M52 378 136 106h74l46 153 46-153h74l84 272h-79l-44-157-48 157h-66l-48-157-44 157H52Z" fill="#b91c1c"/>
+  <path d="M139 413h234" stroke="#f4f4f5" stroke-width="22" stroke-linecap="round"/>
+</svg>

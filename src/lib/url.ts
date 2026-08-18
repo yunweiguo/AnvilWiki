@@ -61,9 +61,9 @@ export function recentPath(locale: Locale): string {
  * Returns a list suitable for injection as <link rel="alternate"> tags.
  * x-default is NOT included here — BaseLayout derives it from the alternates.
  */
-export function languageAlternates(
-  buildPath: (locale: Locale) => string,
-  locales: readonly Locale[],
+export function languageAlternates<T extends string>(
+  buildPath: (locale: T) => string,
+  locales: readonly T[],
 ): Array<{ hreflang: string; href: string }> {
   return locales.map((loc) => ({
     hreflang: loc,

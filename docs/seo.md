@@ -235,7 +235,7 @@
 | ImageObject JSON-LD | 有 `gallery` 的文章 | Google Images 收录资格 |
 | Person JSON-LD | `src/config/authors.ts` 注册过作者的文章 | author 实体从 Organization 升级为 Person(E-E-A-T),支持 sameAs |
 | FAQPage JSON-LD | 有 `codes` frontmatter 的文章 | 本地化四问(redeem/过期/频率)结构化 |
-| gameVersion 徽章 | 文章头 | 时效性信号,配 90 天过期横幅(STALE_CATEGORIES) |
+| gameVersion 徽章 | 文章头 | 时效性信号，过期横幅由每页 `refreshAfterDays` 驱动 |
 | game.config 式新鲜度 | content-pipeline 每周审计 | codes >7 天 / 时效分类 >90 天自动开 issue |
 
 注意:FAQPage 富摘要 Google 已限制到政府/医疗站(游戏站拿不到富展示),其价值在结构化信号而非 SERP 样式。

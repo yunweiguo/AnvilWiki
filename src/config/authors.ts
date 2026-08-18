@@ -15,12 +15,7 @@ export interface AuthorInfo {
   sameAs?: string[];
 }
 
-export const authors: Record<string, AuthorInfo> = {
-  // Example:
-  // 'Yuan Ruiqin': { url: 'https://yuanruiqin.dev', sameAs: ['https://github.com/PNGTRID'] },
-  // DEMO (anvilwiki.pages.dev) — removed by apply-template / setup.yml.
-  'Forge Master Kael': { url: '/about' },
-};
+export const authors: Record<string, AuthorInfo> = {};
 
 /** Look up an author by frontmatter name (undefined = no entry). */
 export function getAuthor(name: string | undefined): AuthorInfo | undefined {

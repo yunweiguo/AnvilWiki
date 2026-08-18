@@ -10,6 +10,8 @@
 |---|---|---|
 | [handbook/](handbook/) | 📚 站内手册源码:学习手册 8 章(SOP+提示词)+ 开发手册 6 章,中英双语 | 🎯 新手从[学习手册](https://anvilwiki.pages.dev/zh/landing/docs/learn)开始 |
 | [game-selection.md](game-selection.md) | 做哪个游戏?上线第一天写什么? | 🎯 想建站赚钱的人(从这里开始) |
+| [projects/nmrih2/README.md](projects/nmrih2/README.md) | No More Room in Hell 2 完整项目文档入口:PRD / 实现 / 内容 / TDH | 当前 NMRiH2 站实施 |
+| [projects/nmrih2-mvp.md](projects/nmrih2-mvp.md) | NMRiH2 首批 10 页 TDH / Heading / keyword ownership 专项 | SEO / 内容 |
 | [README](../README.md) | 项目是什么 + 5 分钟跑起来 | 所有人 |
 | [apply-template.md](apply-template.md) | 把 demo 站换成你的游戏(配置层手册) | fork 用户 |
 | [deployment.md](deployment.md) | 部署到 Cloudflare Pages(含 wrangler.toml 大坑) | fork 用户 |
@@ -35,6 +37,18 @@
 4. game-selection.md 首日 10 页 ← 用 AI 直接产页(README「用 AI 直接生成内容」章节)
 5. deployment.md          ← 部署上线(⚠️ 必读 wrangler.toml 警告)
 6. staying-up-to-date.md  ← 上线后回来看:如何跟上游、如何保持新鲜
+```
+
+### 🎮 路径 A1:我要实施 No More Room in Hell 2 站
+
+```
+1. projects/nmrih2/README.md       ← 项目总入口 / 当前状态 / 文档地图
+2. projects/nmrih2/PRD.md          ← 产品定位、范围、信息架构、成功指标
+3. projects/nmrih2-mvp.md          ← 10 页 TDH、H1/H2/H3、keyword ownership
+4. projects/nmrih2/CONTENT-PLAN.md ← 素材、内链、freshness、发布顺序
+5. projects/nmrih2/IMPLEMENTATION.md ← 文件级实现、验证、部署
+6. apply-template.md               ← 通用实例化细节参考
+7. deployment.md                   ← Cloudflare Pages 上线
 ```
 
 ### ✍️ 路径 B:我是内容作者(站已建好,我来写文章)
@@ -69,6 +83,7 @@
 我该读哪份文档?
 │
 ├─ 还没建站,纠结做哪个游戏 ──────────→ game-selection.md
+├─ 正在做 NMRiH2 站 ─────────────────→ projects/nmrih2/README.md
 ├─ 刚 fork,要换成我的游戏 ───────────→ apply-template.md
 ├─ 要部署 / 部署后 env 不生效 ───────→ deployment.md(wrangler.toml 警告)
 ├─ 要写/更新文章 ────────────────────→ content-format.md 或直接对 AI 说

@@ -7,18 +7,15 @@
  *   - site intro (name + description)
  *   - every default-locale article: title, absolute URL, one-line summary
  *
- * Game-wiki queries ("how to beat X", "latest codes") increasingly land in
- * AI chatbots; listing content here costs nothing and helps AI crawlers
- * discover and cite the site.
+ * Listing the live guide corpus here helps AI crawlers discover and cite the
+ * site without advertising removed template sections.
  */
 import type { APIRoute } from 'astro';
 import { site, siteUrl } from '~/config/site';
-import { landingLinkEnabled } from '~/config/project';
 import { getCollection } from 'astro:content';
 import { parseEntryId } from '~/lib/content';
 import { defaultLocale } from '~/i18n/routing';
 import { detailPath } from '~/lib/url';
-import { chaptersForLocale, handbookPath, parseHandbookId, sortChapters } from '~/lib/handbook';
 
 export const GET: APIRoute = async () => {
   const all = await getCollection('wiki');
@@ -34,7 +31,7 @@ export const GET: APIRoute = async () => {
     '',
     `> ${site.description}`,
     '',
-    `Wiki for ${site.game.name} (${site.game.platform}, by ${site.game.developer}). Articles cover boss guides, tier lists, codes, items, and beginner tips.`,
+    `Wiki for ${site.game.name}, available on ${site.game.platform} and developed by ${site.game.developer}. ${site.description}`,
     '',
     '## Articles',
     '',
@@ -46,24 +43,6 @@ export const GET: APIRoute = async () => {
     const url = `${siteUrl}${detailPath(e.data.category, slug, defaultLocale)}`;
     const summary = e.data.summary ?? e.data.description;
     lines.push(`- [${e.data.title}](${url}): ${summary}`);
-  }
-
-  // Handbook (project docs center, /landing/docs) — this is AnvilWiki-project
-  // content, not the site's own game content, so it only appears while the
-  // project landing page exists. apply-template removes the landing routes
-  // and flips landingLinkEnabled → fork sites never list AnvilWiki URLs here.
-  if (landingLinkEnabled) {
-    const handbookAll = await getCollection('handbook');
-    const chapters = sortChapters(chaptersForLocale(handbookAll, 'en'));
-    if (chapters.length > 0) {
-      lines.push('', '## Handbook', '');
-      for (const c of chapters) {
-        const slug = parseHandbookId(c.id)?.slug ?? '';
-        lines.push(
-          `- [${c.data.title}](${siteUrl}${handbookPath('en', slug)}): ${c.data.description}`,
-        );
-      }
-    }
   }
 
   return new Response(lines.join('\n') + '\n', {

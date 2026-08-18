@@ -53,7 +53,7 @@ jobs:
           # falls back to the demo domain and the built canonical/sitemap
           # point at the wrong site (production builds use wrangler.toml,
           # which this does not affect).
-          SITE_URL: ${{ vars.SITE_URL || 'https://anvilwiki.pages.dev' }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://nmrih2-5cp.pages.dev' }}
 
       - name: Content lint (H1/alt/slashes)
         run: pnpm check-content
