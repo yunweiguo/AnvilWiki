@@ -52,9 +52,7 @@ describe('url helpers', () => {
     });
 
     it('handles nested slugs', () => {
-      expect(detailPath('guides', 'early-game/beginner', 'en')).toBe(
-        '/guides/early-game/beginner',
-      );
+      expect(detailPath('guides', 'early-game/beginner', 'en')).toBe('/guides/early-game/beginner');
       expect(detailPath('guides', 'early-game/beginner', 'ja')).toBe(
         '/ja/guides/early-game/beginner',
       );
@@ -62,9 +60,9 @@ describe('url helpers', () => {
   });
 
   describe('localeFromPath', () => {
-    it('extracts the locale from a prefixed path', () => {
-      expect(localeFromPath('/ja/bosses/emberfang')).toBe('ja');
-      expect(localeFromPath('/ja')).toBe('ja');
+    it('does not treat an unsupported locale prefix as configured', () => {
+      expect(localeFromPath('/ja/bosses/emberfang')).toBe('en');
+      expect(localeFromPath('/ja')).toBe('en');
     });
 
     it('returns the default locale when no prefix is present', () => {
