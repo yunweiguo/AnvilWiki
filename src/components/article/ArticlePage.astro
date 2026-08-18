@@ -75,10 +75,14 @@ const fallbackVideos = (entry.data.videos ?? []).filter((v: string) => !bodySrc.
 
 const { Content, headings } = await render(entry);
 
-const author = entry.data.author ?? site.defaultAuthor;
-const authorInfo = getAuthor(author);
+const author = entry.data.author ?? site.name;
+const authorInfo = entry.data.author ? getAuthor(entry.data.author) : undefined;
 const summary = entry.data.summary;
-const outdated = isPossiblyOutdated(category, entry.data.lastModified, entry.data.date);
+const outdated = isPossiblyOutdated(
+  entry.data.refreshAfterDays,
+  entry.data.lastModified,
+  entry.data.date,
+);
 
 // Reading time estimate: ~200 wpm for space-separated languages,
 // ~400 chars/min for CJK (no spaces). Author-facing, purely informational.
@@ -256,7 +260,7 @@ const jsonLd = [
       </aside>
     )}
 
-    {/* Stale-content notice — time-sensitive categories older than 90 days */}
+    {/* Stale-content notice — threshold comes from this article's frontmatter. */}
     {outdated && (
       <aside class="mt-4 flex items-start gap-2 rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-sm text-foreground" role="note">
         <Icon name="lucide:alert-triangle" class="mt-0.5 h-4 w-4 shrink-0 text-amber-600 dark:text-amber-400" />

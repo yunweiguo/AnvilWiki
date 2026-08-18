@@ -155,7 +155,6 @@ interface SkinInput {
   platform: string;
   developer: string;
   genre: string;
-  releaseDate: string;
   officialUrl: string;
   locales: string[];
   categories: { key: string; icon: string }[];
@@ -176,18 +175,27 @@ function buildHomePreset(input: SkinInput): Record<string, unknown> | null {
   const first = cats[0] ?? 'guides';
 
   const common = {
-    meta: { watermark: input.gameName },
-    updates: { badge: 'Fresh', title: 'Recent updates' },
+    meta: {
+      title: `${input.gameName} Wiki`,
+      description: input.description,
+    },
+    featuredSections: [],
+    latest: { title: 'Recent articles', category: first, limit: 3, href: `/${first}` },
     popular: {
       badge: 'Popular',
-      title: 'Most read',
-      quickLinks: cats.slice(0, 3).map((c) => ({ label: c, href: `/${c}` })),
+      title: 'Popular guides',
+      description: 'Configured starting points for readers.',
+      cards: cats.slice(0, 3).map((c) => ({
+        title: c,
+        description: `Browse ${c}`,
+        href: `/${c}`,
+      })),
     },
     closingCta: {
       title: `Start your ${input.gameName} journey`,
       description: `Bookmark this wiki and check back after every game update.`,
-      primary: { label: 'Browse all', href: `/${first}` },
-      secondary: { label: 'Official site', href: input.officialUrl },
+      primary: { label: 'Browse all', href: `/${first}`, external: false },
+      secondary: { label: 'Official site', href: input.officialUrl, external: true },
     },
   };
 
@@ -208,22 +216,6 @@ function buildHomePreset(input: SkinInput): Record<string, unknown> | null {
           { title: 'Codes', description: 'Free gold, XP, cosmetics', icon: 'lucide:gift', href: '/codes' },
           { title: 'Bosses', description: 'Phase-by-phase strategy', icon: 'lucide:swords', href: '/bosses' },
           { title: 'Tier list', description: 'Best weapons ranked', icon: 'lucide:bar-chart-3', href: `/${cats.find((c) => c !== 'codes') ?? first}` },
-        ],
-      },
-      explore: {
-        title: 'Explore',
-        description: 'The essentials',
-        modules: [
-          {
-            order: 1,
-            name: 'Active codes',
-            description: 'Redeem before they expire',
-            href: '/codes',
-            displayType: 'badge-list',
-            highlights: [
-              { label: 'CODE-PLACEHOLDER', detail: 'Tap to copy on the codes page', badge: 'NEW' },
-            ],
-          },
         ],
       },
       faq: { title: 'FAQ', description: 'Common questions', items: [] },
@@ -250,24 +242,6 @@ function buildHomePreset(input: SkinInput): Record<string, unknown> | null {
         href: `/${c}`,
       })),
     },
-    explore: {
-      title: 'Explore',
-      description: 'Content modules',
-      modules: [
-        {
-          order: 1,
-          name: 'Getting started',
-          description: 'Step-by-step progression',
-          href: '/guides',
-          displayType: 'steps',
-          highlights: [
-            { label: 'Step 1', detail: 'Finish the tutorial', badge: '5 min' },
-            { label: 'Step 2', detail: 'Claim starter codes', badge: '1 min' },
-            { label: 'Step 3', detail: 'First boss run', badge: '15 min' },
-          ],
-        },
-      ],
-    },
     faq: { title: 'FAQ', description: 'Common questions', items: [] },
   };
 }
@@ -291,7 +265,6 @@ function rewriteSiteTs(input: SkinInput): string {
     platform: '${input.platform}',
     developer: '${input.developer}',
     genre: '${input.genre}',
-    releaseDate: '${input.releaseDate}',
   },
   // og:image dims of the SHIPPED hero.webp — if you replace public/images/hero.webp,
   // update these in src/config/site.ts to match (wrong dims mis-crop share cards).
@@ -687,7 +660,6 @@ async function main() {
   const platform = await ask(rl, 'Platform', 'Roblox');
   const developer = await ask(rl, 'Developer / studio', 'Forge Studios');
   const genre = await ask(rl, 'Genre', 'Fantasy RPG');
-  const releaseDate = await ask(rl, 'Release date (ISO, optional)', '');
 
   console.log('\n' + '━'.repeat(60));
   console.log('Locales (comma-separated, first = default)');
@@ -778,7 +750,6 @@ async function main() {
     platform,
     developer,
     genre,
-    releaseDate,
     officialUrl,
     locales: uniqueLocales,
     categories,

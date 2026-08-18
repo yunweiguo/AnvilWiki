@@ -70,6 +70,23 @@ describe('SEO helpers', () => {
       });
       expect(noModified.dateModified).toContain('2026-01-01');
     });
+
+    it('uses the site Organization by default and Person only for an explicit author', () => {
+      const base = {
+        title: 'T',
+        description: 'A sufficiently descriptive article summary.',
+        datePublished: new Date('2026-01-01'),
+        category: 'guides',
+        slug: 'example',
+        locale: 'en' as const,
+      };
+
+      expect(articleJsonLd(base).author).toMatchObject({ '@type': 'Organization' });
+      expect(articleJsonLd({ ...base, authorName: 'Ada Example' }).author).toEqual({
+        '@type': 'Person',
+        name: 'Ada Example',
+      });
+    });
   });
 
   describe('breadcrumbJsonLd', () => {

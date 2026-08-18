@@ -27,6 +27,8 @@ const wiki = defineCollection({
       category: z.string(),
       date: z.coerce.date(),
       lastModified: z.coerce.date().optional(),
+      /** Maximum age of the latest verification before the stale notice appears. */
+      refreshAfterDays: z.number().int().positive().max(365).optional(),
       image: image().optional(),
       tags: z.array(z.string()).default([]),
       noindex: z.boolean().default(false),
@@ -43,7 +45,7 @@ const wiki = defineCollection({
       gameVersion: z.string().max(20).optional(),
       /** Quick-answer summary shown before the article body (AI Overviews / featured snippet). */
       summary: z.string().max(200).optional(),
-      /** Article author name (E-E-A-T signal). Falls back to site.defaultAuthor. */
+      /** Named person credited for this article. Missing authors use the site Organization. */
       author: z.string().optional(),
       /**
        * Optional structured boss stats — rendered as a scannable data card

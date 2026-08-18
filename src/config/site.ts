@@ -41,8 +41,6 @@ export interface SiteConfig {
     developer: string;
     /** Genre description. */
     genre: string;
-    /** ISO release date (optional). */
-    releaseDate?: string;
   };
   /**
    * Dimensions of the default OG/Twitter share image (public/images/hero.webp).
@@ -51,8 +49,6 @@ export interface SiteConfig {
    */
   ogImageWidth: number;
   ogImageHeight: number;
-  /** Default author name for articles without an explicit `author` in frontmatter (E-E-A-T signal). */
-  defaultAuthor?: string;
 }
 
 export const site: SiteConfig = {
@@ -78,12 +74,10 @@ export const site: SiteConfig = {
     platform: 'PC, PlayStation 5, Xbox Series X|S',
     developer: 'Torn Banner Studios',
     genre: 'Co-op survival horror shooter',
-    releaseDate: '2026-08-11',
   },
   // hero.webp is 1200×630 (the recommended OG share aspect ratio).
   ogImageWidth: 1200,
   ogImageHeight: 630,
-  defaultAuthor: 'NMRiH2 Wiki Editorial Team',
 };
 
 /** Absolute site URL (no trailing slash). Falls back to the Astro `site` config. */

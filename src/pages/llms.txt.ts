@@ -31,7 +31,7 @@ export const GET: APIRoute = async () => {
     '',
     `> ${site.description}`,
     '',
-    `Wiki for ${site.game.name} (${site.game.platform}, by ${site.game.developer}). Articles cover crossplay, platform availability, beginner and solo play, Responder progression, and Armageddon 1.0 updates.`,
+    `Wiki for ${site.game.name}, available on ${site.game.platform} and developed by ${site.game.developer}. ${site.description}`,
     '',
     '## Articles',
     '',

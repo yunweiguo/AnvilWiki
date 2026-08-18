@@ -1,53 +1,38 @@
 ---
-/**
- * FaqSection — renders the FAQ accordion from locale JSON `home.faq`.
- *
- * Reused on the dedicated /faq page (and could be dropped back onto the
- * homepage in the future if desired). Pure CSS <details> accordion with a
- * tiny inline script to sync aria-expanded.
- */
-import { Icon } from 'astro-icon/components';
-
-interface FaqItem {
-  question: string;
-  answer: string;
-}
+/** Generic FAQ section driven by locale data. */
+import { type Locale } from '~/i18n/routing';
+import { localizePath } from '~/lib/url';
 
 interface Props {
-  title: string;
-  description?: string;
-  items: FaqItem[];
+  locale: Locale;
+  headingLevel?: 'h1' | 'h2';
+  section: {
+    title: string;
+    description?: string;
+    items: Array<{ question: string; answer: string; link?: { label: string; href: string } }>;
+  };
 }
-const { title, description, items = [] } = Astro.props;
+const { locale, section, headingLevel = 'h2' } = Astro.props;
 ---
 
-<section class="section">
-  <h1 class="text-3xl font-extrabold tracking-tight md:text-4xl">{title}</h1>
-  {description && <p class="mt-2 text-muted-foreground">{description}</p>}
-  <div class="mt-8 space-y-2" data-faq-group>
-    {
-      items.map((item: FaqItem) => (
-        <details class="group rounded-md border bg-card">
-          <summary
-            class="flex cursor-pointer list-none items-center justify-between p-4 font-medium"
-            aria-expanded="false"
-          >
-            {item.question}
-            <Icon name="lucide:chevron-down" class="h-4 w-4 transition group-open:rotate-180" />
-          </summary>
-          <div class="px-4 pb-4 text-sm text-muted-foreground">{item.answer}</div>
-        </details>
-      ))
-    }
+<section class:list={['section', headingLevel === 'h2' && 'border-t border-border']}>
+  {headingLevel === 'h1' ? (
+    <h1 class="text-3xl font-extrabold tracking-tight md:text-4xl">{section.title}</h1>
+  ) : (
+    <h2 class="text-2xl font-bold tracking-tight md:text-3xl">{section.title}</h2>
+  )}
+  {section.description && <p class="mt-2 max-w-3xl text-muted-foreground">{section.description}</p>}
+  <div class="mt-6 grid gap-4 md:grid-cols-2">
+    {section.items.map((item) => (
+      <article class="rounded-lg border bg-card p-5">
+        <h3 class="text-lg font-semibold leading-snug">{item.question}</h3>
+        <p class="mt-2 leading-7 text-muted-foreground">{item.answer}</p>
+        {item.link && (
+          <a href={localizePath(item.link.href, locale)} class="mt-3 inline-block text-sm font-medium text-foreground hover:text-nav hover:underline">
+            {item.link.label}
+          </a>
+        )}
+      </article>
+    ))}
   </div>
 </section>
-
-<script is:inline>
-  // Sync aria-expanded on FAQ summaries when details toggle.
-  document.querySelectorAll('[data-faq-group] details').forEach((d) => {
-    const sync = () =>
-      d.querySelector('summary')?.setAttribute('aria-expanded', d.open ? 'true' : 'false');
-    sync();
-    d.addEventListener('toggle', sync);
-  });
-</script>

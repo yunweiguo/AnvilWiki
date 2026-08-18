@@ -104,151 +104,93 @@
     "hero": {
       "badge": "Updated for Armageddon 1.0",
       "title": "No More Room in Hell 2 Wiki & Guides",
-      "description": "Crossplay, platform availability, solo guides, beginner tips and updated information for No More Room in Hell 2.",
-      "ctaPrimary": "Official Game Site",
-      "ctaSecondary": "Browse Platforms",
+      "description": "Find direct, source-linked answers about crossplay, supported platforms, Solo Mode, survival basics, Responders, and the current 1.0 release.",
+      "ctaPrimary": { "label": "Crossplay Guide", "href": "/guides/crossplay", "external": false },
+      "ctaSecondary": { "label": "Beginner Guide", "href": "/guides/beginner-tips", "external": false },
       "videoId": ""
-    },
-    "updates": {
-      "title": "Latest No More Room in Hell 2 Updates"
     },
     "start": {
       "badge": "Start Here",
-      "title": "Find the Answer You Need",
+      "title": "Start Here",
       "cards": [
-        {
-          "number": "1",
-          "title": "Crossplay Guide",
-          "description": "See which PC, PS5, and Xbox players can team up and how cross-platform play works.",
-          "icon": "lucide:users",
-          "href": "/guides/crossplay"
-        },
-        {
-          "number": "2",
-          "title": "Platform Guides",
-          "description": "Compare availability, online requirements, and purchase options across every supported platform.",
-          "icon": "lucide:gamepad-2",
-          "href": "/platforms"
-        },
-        {
-          "number": "3",
-          "title": "Beginner Tips",
-          "description": "Prepare for your first deployment with practical advice on infection, resources, combat, and extraction.",
-          "icon": "lucide:shield-check",
-          "href": "/guides/beginner-tips"
-        },
-        {
-          "number": "4",
-          "title": "Solo Mode",
-          "description": "Learn what Solo Mode is for and how to practice on your own before joining a co-op squad.",
-          "icon": "lucide:user",
-          "href": "/guides/solo-mode"
-        }
+        { "number": "1", "title": "Crossplay Guide", "description": "Check every supported PC, PS5, and Xbox pairing before inviting your squad.", "icon": "lucide:users", "href": "/guides/crossplay" },
+        { "number": "2", "title": "Platform Guides", "description": "Compare current availability, purchase options, and online requirements.", "icon": "lucide:gamepad-2", "href": "/platforms/xbox" },
+        { "number": "3", "title": "Beginner Tips", "description": "Learn practical habits for infection, combat, resources, teamwork, and extraction.", "icon": "lucide:shield-check", "href": "/guides/beginner-tips" },
+        { "number": "4", "title": "Solo Mode", "description": "Understand independent play and how to prepare before risking a developed Responder.", "icon": "lucide:user", "href": "/guides/solo-mode" }
       ]
+    },
+    "featuredSections": [
+      {
+        "title": "No More Room in Hell 2 Crossplay",
+        "description": "Yes. No More Room in Hell 2 supports crossplay between Windows PC, PlayStation 5, and Xbox Series X|S. Players on any current platform can join the same online co-op squad, including mixed groups spanning all three ecosystems. The supported console versions are current-generation only, so PS4 and Xbox One are not part of the compatibility matrix. Cross-platform multiplayer does not automatically mean universal cross-progression: official launch information confirms shared play, while account progress outside the Xbox ecosystem should not be assumed to transfer. Use the full guide for setup details and version-aware troubleshooting.",
+        "matrix": {
+          "caption": "Cross-platform multiplayer compatibility",
+          "headers": ["Platform pairing", "Compatible?", "What it means"],
+          "rows": [
+            ["PC ↔ PS5", "Yes", "Steam and PlayStation 5 players can join the same squad."],
+            ["PC ↔ Xbox Series X|S", "Yes", "Windows PC and current Xbox consoles support shared online play."],
+            ["PS5 ↔ Xbox Series X|S", "Yes", "Current PlayStation and Xbox players can play together."]
+          ]
+        },
+        "cta": { "label": "Read the complete crossplay guide", "href": "/guides/crossplay", "external": false }
+      },
+      {
+        "title": "Where Can You Play No More Room in Hell 2?",
+        "description": "The 1.0 release is available on Windows PC and current-generation consoles. Each guide below separates confirmed store information from details that can change over time.",
+        "cards": [
+          { "title": "Xbox Series X|S", "description": "Yes. The game is sold for Xbox Series X|S and supports cross-platform co-op. Xbox One is not listed as a supported version, and online console multiplayer requires an eligible subscription plan with that capability.", "href": "/platforms/xbox", "linkLabel": "View the Xbox guide" },
+          { "title": "PlayStation 5", "description": "Yes. The PlayStation release is available on PS5 with Solo Mode and online play for up to eight players. PS4 is not listed, while online multiplayer may require a separate PlayStation subscription.", "href": "/platforms/ps5", "linkLabel": "View the PS5 guide" },
+          { "title": "Steam / PC", "description": "Yes. The Windows PC version is sold on Steam and lists cross-platform multiplayer, online co-op, controller support, achievements, and Steam Cloud. Check the current store page before buying for live pricing and requirements.", "href": "/platforms/steam-pc", "linkLabel": "View the Steam and PC guide" },
+          { "title": "Game Pass", "description": "No, as last checked on August 18, 2026, the game was sold separately and was not listed in the Xbox or PC Game Pass catalog. This is a time-sensitive status, so verify the current catalog before deciding how to buy.", "href": "/platforms/game-pass", "linkLabel": "Check the current Game Pass status" }
+        ]
+      },
+      {
+        "title": "No More Room in Hell 2 Beginner & Gameplay Guides",
+        "description": "Learn the systems that matter before committing valuable gear or a developed character to a dangerous run.",
+        "cards": [
+          { "title": "Beginner Survival", "description": "Start with the tutorial, control noise, stay close enough to help the squad, share scarce supplies, and treat infection early. A safe extraction is usually more valuable than one unnecessary fight.", "href": "/guides/beginner-tips", "linkLabel": "Read the beginner guide" },
+          { "title": "Solo Mode", "description": "Solo Mode supports independent practice on every map and removes the pressure of coordinating with a full squad. It is useful for learning routes and objectives, though the core co-op experience plays differently.", "href": "/guides/solo-mode", "linkLabel": "Learn how Solo Mode works" },
+          { "title": "Responders & Permadeath", "description": "Responders are persistent characters whose individual progress can be lost on death. Successful extraction protects that investment, while loadouts, perks, infection, and the limited Rescue Beacon shape every risk decision.", "href": "/gameplay/characters", "linkLabel": "Understand characters and Responders" },
+          { "title": "Progression", "description": "Armageddon 1.0 revised the account economy, skills, weekly Assignments, Merits, Nightmare Tokens, and loadout rules. The launch update guide explains the reset and the progression changes that apply after Early Access.", "href": "/updates/armageddon-1-0", "linkLabel": "Review the 1.0 progression changes" }
+        ]
+      }
+    ],
+    "latest": {
+      "title": "Latest No More Room in Hell 2 Updates",
+      "description": "Follow source-linked coverage of major releases and material gameplay changes. General guides are excluded from this section.",
+      "category": "updates",
+      "limit": 3,
+      "href": "/updates",
+      "linkLabel": "Browse all updates"
     },
     "popular": {
-      "badge": "Popular Answers",
-      "title": "Trending Topics",
-      "quickLinks": [
-        { "label": "Crossplay on PC, PS5, and Xbox", "href": "/guides/crossplay" },
-        { "label": "Xbox Series X|S availability", "href": "/platforms/xbox" },
-        { "label": "Current Game Pass status", "href": "/platforms/game-pass" },
-        { "label": "How to play Solo Mode", "href": "/guides/solo-mode" }
-      ]
-    },
-    "explore": {
-      "title": "Explore No More Room in Hell 2",
-      "description": "Use the topic hubs below to find verified platform answers, survival guidance, and launch updates.",
-      "modules": [
-        {
-          "order": 1,
-          "name": "No More Room in Hell 2 Crossplay",
-          "description": "One compatibility guide for every supported platform pairing.",
-          "href": "/guides/crossplay",
-          "displayType": "labeled-cards",
-          "highlights": [
-            { "label": "PC + PS5", "detail": "Cross-platform multiplayer supported" },
-            { "label": "PC + Xbox", "detail": "Cross-platform multiplayer supported" },
-            { "label": "PS5 + Xbox", "detail": "Cross-platform multiplayer supported" }
-          ]
-        },
-        {
-          "order": 2,
-          "name": "No More Room in Hell 2 Platforms",
-          "description": "Availability and requirements for the current PC and console versions.",
-          "href": "/platforms",
-          "displayType": "labeled-cards",
-          "highlights": [
-            { "label": "Xbox", "detail": "Xbox Series X|S and Xbox Play Anywhere" },
-            { "label": "PlayStation", "detail": "PS5 with optional solo play" },
-            { "label": "Steam", "detail": "Windows PC with native controller support" },
-            { "label": "Game Pass", "detail": "Subscription status checked regularly" }
-          ]
-        },
-        {
-          "order": 3,
-          "name": "No More Room in Hell 2 Beginner Guides",
-          "description": "Build good survival habits before the horde punishes every mistake.",
-          "href": "/guides/beginner-tips",
-          "displayType": "steps",
-          "highlights": [
-            { "label": "1", "detail": "Complete the guided tutorial" },
-            { "label": "2", "detail": "Practice maps in Solo Mode" },
-            { "label": "3", "detail": "Share scarce resources in co-op" },
-            { "label": "4", "detail": "Extract to preserve Responder progress" }
-          ]
-        },
-        {
-          "order": 4,
-          "name": "Latest No More Room in Hell 2 Updates",
-          "description": "Track official launch features and major changes without stale speculation.",
-          "href": "/updates/armageddon-1-0",
-          "displayType": "timeline",
-          "highlights": [
-            {
-              "label": "Aug 11, 2026",
-              "detail": "Armageddon 1.0 launched on PC, PS5, and Xbox Series X|S",
-              "badge": "Latest"
-            },
-            {
-              "label": "Armageddon",
-              "detail": "Added Survival, Solo Mode, Raven Rock, a tutorial, and weekly Assignments"
-            },
-            {
-              "label": "Revelation 0.9",
-              "detail": "Improved firearms, progression clarity, difficulty, and stability"
-            }
-          ]
-        }
+      "badge": "Validated search intents",
+      "title": "Popular No More Room in Hell 2 Guides",
+      "description": "These starting points reflect the core questions selected for the MVP, not a claim about live readership or an analytics ranking.",
+      "cards": [
+        { "title": "Crossplay", "description": "Confirm PC, PS5, and Xbox compatibility, setup expectations, and current troubleshooting context.", "href": "/guides/crossplay", "linkLabel": "Open the crossplay guide" },
+        { "title": "Xbox", "description": "Check supported Xbox hardware, online requirements, purchase details, and cross-platform play.", "href": "/platforms/xbox", "linkLabel": "Open the Xbox guide" },
+        { "title": "Game Pass", "description": "See the dated catalog check and separate it from Xbox online multiplayer requirements.", "href": "/platforms/game-pass", "linkLabel": "Open the Game Pass guide" },
+        { "title": "Solo Mode", "description": "Learn what Solo Mode offers and how independent runs differ from eight-player co-op.", "href": "/guides/solo-mode", "linkLabel": "Open the Solo Mode guide" }
       ]
     },
     "faq": {
-      "title": "No More Room in Hell 2 Questions",
-      "description": "Direct answers to common questions about the current 1.0 release.",
+      "title": "No More Room in Hell 2 FAQ",
+      "description": "Short answers to the six questions new and returning players ask most often.",
       "items": [
-        {
-          "question": "Is No More Room in Hell 2 crossplay?",
-          "answer": "Yes. The 1.0 release supports cross-platform multiplayer across PC, PlayStation 5, and Xbox Series X|S."
-        },
-        {
-          "question": "Can you play No More Room in Hell 2 solo?",
-          "answer": "Yes. Armageddon 1.0 added Solo Mode so independent Responders can practice and learn on every map."
-        },
-        {
-          "question": "Which consoles support No More Room in Hell 2?",
-          "answer": "The console release is available for PlayStation 5 and Xbox Series X|S. PS4 and Xbox One versions are not listed."
-        },
-        {
-          "question": "Is No More Room in Hell 2 free?",
-          "answer": "No. It is a paid game with a $29.99 USD base price; temporary store discounts may change the current purchase price."
-        }
+        { "question": "Is No More Room in Hell 2 crossplay?", "answer": "Yes. The current 1.0 release supports cross-platform multiplayer between Windows PC, PlayStation 5, and Xbox Series X|S. Mixed-platform groups can join the same online co-op squad. Crossplay does not by itself confirm that progress transfers between every storefront or account ecosystem.", "link": { "label": "See the crossplay matrix", "href": "/guides/crossplay" } },
+        { "question": "Is No More Room in Hell 2 on Xbox?", "answer": "Yes. No More Room in Hell 2 is available on Xbox Series X|S and supports cross-platform co-op. It is not listed for Xbox One. The Xbox store also states that online console multiplayer requires a separately sold, eligible subscription plan that includes that capability.", "link": { "label": "Read the Xbox guide", "href": "/platforms/xbox" } },
+        { "question": "Is No More Room in Hell 2 on PS5?", "answer": "Yes. No More Room in Hell 2 is available on PlayStation 5, with one-player Solo Mode and online co-op for up to eight players. It is not listed for PS4. The PlayStation Store is the best place to verify current pricing and online subscription requirements.", "link": { "label": "Read the PS5 guide", "href": "/platforms/ps5" } },
+        { "question": "Is No More Room in Hell 2 on Game Pass?", "answer": "No, as checked on August 18, 2026. The official Xbox listing showed the game as a separate purchase and did not mark it as included with Xbox Game Pass or PC Game Pass. Catalog availability can change, so treat this as a dated status check.", "link": { "label": "Verify the Game Pass status", "href": "/platforms/game-pass" } },
+        { "question": "Can you play No More Room in Hell 2 solo?", "answer": "Yes. Armageddon 1.0 added Solo Mode for independent practice and learning on every map. It is a useful way to study objectives and survival systems without joining an online squad, although it does not reproduce the communication and rescue decisions of co-op.", "link": { "label": "Read the Solo Mode guide", "href": "/guides/solo-mode" } },
+        { "question": "Is No More Room in Hell 2 free?", "answer": "No. It is a paid game rather than a free-to-play release. The listed base price and temporary discounts can vary by storefront, region, and date, so check Steam, the PlayStation Store, or the Xbox Store for the current amount before purchasing.", "link": { "label": "Compare the current buying context", "href": "/guides/is-it-worth-it" } }
       ]
     },
     "closingCta": {
-      "title": "Prepare Before You Deploy",
-      "description": "Start with the beginner guide, then check crossplay and platform details before assembling your squad.",
-      "primary": "Visit the Official Site",
-      "secondary": ""
+      "title": "Choose Your Next Guide",
+      "description": "Confirm crossplay before assembling a mixed-platform squad, or learn the survival basics before your first deployment.",
+      "primary": { "label": "Read the Crossplay Guide", "href": "/guides/crossplay", "external": false },
+      "secondary": { "label": "Read the Beginner Guide", "href": "/guides/beginner-tips", "external": false }
     }
   },
   "footer": {

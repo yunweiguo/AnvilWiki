@@ -119,13 +119,22 @@ export async function localesForEntry(category: string, slug: string): Promise<L
   return Array.from(found);
 }
 
-/**
- * Recent articles for a locale (for homepage "Recent Updates").
- */
-export async function getRecentEntries(locale: Locale, limit = 6): Promise<WikiEntry[]> {
+/** Recent articles for a locale, optionally constrained to one category. */
+export async function getRecentEntries(
+  locale: Locale,
+  options: { category?: string; limit?: number } = {},
+): Promise<WikiEntry[]> {
+  const { category, limit = 6 } = options;
   const all = await getCollection('wiki');
   return all
-    .filter((e) => isPublished(e) && parseEntryId(e.id)?.locale === locale)
+    .filter((e) => {
+      const parsed = parseEntryId(e.id);
+      return (
+        isPublished(e) &&
+        parsed?.locale === locale &&
+        (category === undefined || parsed.category === category)
+      );
+    })
     .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
     .slice(0, limit);
 }
@@ -224,7 +233,6 @@ export async function tagLabelFor(tagSlug: string, locale: Locale): Promise<stri
   return null;
 }
 
-// Staleness constants + predicate live in lib/content-utils.ts (pure,
-// vitest-testable — this module imports astro:content and can't be loaded
-// outside a build).
-export { isPossiblyOutdated, STALE_AFTER_DAYS, STALE_CATEGORIES } from '~/lib/content-utils';
+// The staleness predicate lives in lib/content-utils.ts so it stays unit-testable
+// without importing Astro's content runtime.
+export { isPossiblyOutdated } from '~/lib/content-utils';

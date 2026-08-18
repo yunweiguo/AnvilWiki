@@ -9,7 +9,7 @@ import { defaultLocale, isLocale, type Locale } from '~/i18n/routing';
 import { siteUrl } from '~/config/site';
 
 /** Build a path with the locale prefix applied (or none for default locale). */
-export function localizePath(path: string, locale: string): string {
+export function localizePath(path: string, locale: Locale): string {
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
   if (locale === defaultLocale) return cleanPath;
   // For the root path "/", avoid producing "/<locale>/" (trailing slash).
@@ -19,27 +19,27 @@ export function localizePath(path: string, locale: string): string {
 }
 
 /** Build an absolute URL (with domain) for a path + locale. */
-export function absoluteUrl(path: string, locale: string): string {
+export function absoluteUrl(path: string, locale: Locale): string {
   return `${siteUrl}${localizePath(path, locale)}`;
 }
 
 /** Home URL for a locale. */
-export function homeUrl(locale: string): string {
+export function homeUrl(locale: Locale): string {
   return localizePath('/', locale);
 }
 
 /** List page URL for a category + locale. e.g. localizeListPath('bosses', 'en') -> '/bosses' */
-export function listPath(category: string, locale: string): string {
+export function listPath(category: string, locale: Locale): string {
   return localizePath(`/${category}`, locale);
 }
 
 /** Article detail URL. e.g. detailPath('bosses', 'emberfang', 'en') -> '/bosses/emberfang' */
-export function detailPath(category: string, slug: string, locale: string): string {
+export function detailPath(category: string, slug: string, locale: Locale): string {
   return localizePath(`/${category}/${slug}`, locale);
 }
 
 /** Tag index URL for a locale. e.g. tagsPath('en') -> '/tags' */
-export function tagsPath(locale: string): string {
+export function tagsPath(locale: Locale): string {
   return localizePath('/tags', locale);
 }
 
@@ -47,12 +47,12 @@ export function tagsPath(locale: string): string {
  * Tag aggregation page URL. `tagSlug` must come from slugifyTag() so article
  * tag links and the route params always match.
  */
-export function tagPath(tagSlug: string, locale: string): string {
+export function tagPath(tagSlug: string, locale: Locale): string {
   return localizePath(`/tags/${tagSlug}`, locale);
 }
 
 /** Recent-updates page URL for a locale. */
-export function recentPath(locale: string): string {
+export function recentPath(locale: Locale): string {
   return localizePath('/recent', locale);
 }
 

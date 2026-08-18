@@ -12,7 +12,7 @@
     "shared": { "type": "object" },
     "home": {
       "type": "object",
-      "required": ["hero", "start", "explore"],
+      "required": ["hero", "start", "featuredSections", "latest", "popular", "faq"],
       "properties": {
         "meta": {
           "type": "object",
@@ -30,11 +30,16 @@
             "videoId": { "type": "string", "description": "YouTube video ID — hero video is lazy-loaded, leave empty for none." }
           }
         },
-        "updates": {
+        "latest": {
           "type": "object",
+          "required": ["title", "category", "limit", "href"],
           "properties": {
-            "badge": { "type": "string" },
-            "title": { "type": "string" }
+            "title": { "type": "string" },
+            "description": { "type": "string" },
+            "category": { "type": "string" },
+            "limit": { "type": "integer", "minimum": 1 },
+            "href": { "type": "string", "pattern": "^/" },
+            "linkLabel": { "type": "string" }
           }
         },
         "start": {
@@ -58,22 +63,18 @@
             }
           }
         },
+        "featuredSections": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/featuredSection" }
+        },
         "popular": {
           "type": "object",
+          "required": ["title", "cards"],
           "properties": {
             "badge": { "type": "string" },
             "title": { "type": "string" },
-            "quickLinks": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "required": ["label", "href"],
-                "properties": {
-                  "label": { "type": "string" },
-                  "href": { "type": "string" }
-                }
-              }
-            }
+            "description": { "type": "string" },
+            "cards": { "type": "array", "items": { "$ref": "#/$defs/card" } }
           }
         },
         "explore": {
@@ -119,7 +120,8 @@
                 "required": ["question", "answer"],
                 "properties": {
                   "question": { "type": "string" },
-                  "answer": { "type": "string" }
+                  "answer": { "type": "string" },
+                  "link": { "$ref": "#/$defs/cta" }
                 }
               }
             }
@@ -143,7 +145,41 @@
       "required": ["label", "href"],
       "properties": {
         "label": { "type": "string" },
-        "href": { "type": "string" }
+        "href": { "type": "string" },
+        "external": { "type": "boolean" }
+      }
+    },
+    "card": {
+      "type": "object",
+      "required": ["title", "description"],
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "href": { "type": "string", "pattern": "^/" },
+        "linkLabel": { "type": "string" }
+      }
+    },
+    "featuredSection": {
+      "type": "object",
+      "required": ["title"],
+      "properties": {
+        "badge": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "cards": { "type": "array", "items": { "$ref": "#/$defs/card" } },
+        "cta": { "$ref": "#/$defs/cta" },
+        "matrix": {
+          "type": "object",
+          "required": ["headers", "rows"],
+          "properties": {
+            "caption": { "type": "string" },
+            "headers": { "type": "array", "items": { "type": "string" } },
+            "rows": {
+              "type": "array",
+              "items": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        }
       }
     }
   }
